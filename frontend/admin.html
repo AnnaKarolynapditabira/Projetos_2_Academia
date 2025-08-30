@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin • Academia</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; background:#0f1115; color:#fff; }
+    .wrap { max-width: 1100px; margin: 2rem auto; padding: 1rem; }
+    h1,h2 { margin: .3rem 0 1rem; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .card { background:#171a21; padding: 1rem; border-radius: 12px; }
+    label { display:block; font-size:.9rem; margin:.25rem 0; color:#cbd5e1; }
+    input, select { width:100%; padding:.6rem .7rem; border-radius:8px; border:1px solid #30343f; background:#0f1115; color:#fff; }
+    button { padding:.6rem .9rem; border-radius:8px; border:0; background:#08b934; color:#fff; cursor:pointer; }
+    table { width:100%; border-collapse: collapse; font-size:.95rem; }
+    th,td { padding:.5rem .6rem; border-bottom:1px solid #2a2f3a; text-align:left; }
+    .row { display:flex; gap:.5rem; align-items:center; }
+    small.muted { color:#94a3b8; }
+    .ok { color:#10b981; }
+    .err { color:#ef4444; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Administração • Academia</h1>
+    <p class="row"><small class="muted">API alvo:</small> <code id="apiBase">http://localhost:3000/api</code></p>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Novo Aluno</h2>
+        <div class="row">
+          <div style="flex:1">
+            <label>Nome</label>
+            <input id="aluno_nome" placeholder="Nome completo"/>
+          </div>
+          <div style="width:120px">
+            <label>Idade</label>
+            <input id="aluno_idade" type="number" min="0" max="120"/>
+          </div>
+        </div>
+        <div class="row">
+          <div style="flex:1">
+            <label>E-mail</label>
+            <input id="aluno_email" type="email" placeholder="email@exemplo.com"/>
+          </div>
+          <div style="width:180px">
+            <label>Telefone</label>
+            <input id="aluno_tel" placeholder="(xx) 9xxxx-xxxx"/>
+          </div>
+        </div>
+        <div class="row">
+          <div style="width:140px">
+            <label>Peso (kg)</label>
+            <input id="aluno_peso" type="number" step="0.01" min="0"/>
+          </div>
+          <div style="width:140px">
+            <label>Altura (m)</label>
+            <input id="aluno_altura" type="number" step="0.01" min="0"/>
+          </div>
+          <div style="flex:1">
+            <label>Plano</label>
+            <select id="aluno_plano">
+              <option value="">Selecione um plano</option>
+            </select>
+          </div>
+        </div>
+        <div class="row" style="justify-content:flex-end; margin-top:.6rem">
+          <button onclick="criarAluno()">Salvar</button>
+        </div>
+        <p id="aluno_msg"></p>
+      </section>
+
+      <section class="card">
+        <h2>Vincular Treino ao Aluno</h2>
+        <div class="row">
+          <div style="flex:1">
+            <label>Aluno</label>
+            <select id="vt_aluno"></select>
+          </div>
+          <div style="flex:1">
+            <label>Treino</label>
+            <select id="vt_treino"></select>
+          </div>
+        </div>
+        <div class="row" style="justify-content:flex-end; margin-top:.6rem">
+          <button onclick="vincularTreino()">Vincular</button>
+        </div>
+        <p id="vt_msg"></p>
+      </section>
+    </div>
+
+    <section class="card" style="margin-top:1rem">
+      <h2>Alunos</h2>
+      <table id="tb_alunos">
+        <thead><tr><th>ID</th><th>Nome</th><th>Idade</th><th>Email</th><th>Plano</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script>
+    // popula planos no frontend
+    (function(){
+      const select = document.getElementById('aluno_plano');
+      const defaultPlans = [
+        { id: 'bronze', nome: 'Plano Bronze' },
+        { id: 'prata',  nome: 'Plano Prata' },
+        { id: 'ouro',   nome: 'Plano Ouro' }
+      ];
+      if (select && select.options.length <= 1) {
+        defaultPlans.forEach(p => {
+          const opt = document.createElement('option');
+          opt.value = p.id;
+          opt.textContent = p.nome;
+          select.appendChild(opt);
+        });
+      }
+    })();
+
+    fetch(document.getElementById('apiBase').textContent.replace(/\/$/,'') + '/health')
+      .then(r => r.json()).then(console.log).catch(e => console.error('fetch err', e));
+  </script>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!-- PROJETO DESENVOLVE - PROJETOS I -->
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="modalidades.html" />
+    <title>Desenvolve Saúde</title>
+  </head>
+
+  <body>
+
+    <!-- NAV -->
+    <div id="top"></div>
+    <nav class="nav">
+      <div class="nav__logo">
+        <a href="#"><img src="../Imagens/logo.png" alt="logo" /></a>
+      </div>
+      <!-- Checkbox para controlar o menu -->
+      <input type="checkbox" id="menu-toggle" class="nav__checkbox">
+      <label for="menu-toggle" class="nav__toggle" aria-label="Abrir menu">☰</label>  <!-- Quando estiver em resolução mobile -->
+      <ul class="nav__links">
+        <li class="link"><a href="#quemsomos">Quem Somos</a></li>
+        <li class="link"><a href="#estrutura">Estrutura</a></li>
+        <li class="link"><a href="#modalidades">Modalidades</a></li>
+        <li class="link"><a href="#equipe">Equipe</a></li>
+        <li class="link"><a href="#planos">Planos</a></li>
+        <li class="link"><a href="#app">Baixe App</a></li>
+      </ul>
+    </nav>
+    
+    <!-- HEADER -->
+    <header class="section__container header__container">
+      <div class="header__content">
+        <span class="bg__blur"></span>
+        <span class="bg__blur header__blur"></span>
+        <h4>COMECE SUA EVOLUÇÃO</h4>
+        <h1><span>MOLDE SEU CORPO</span> E SUA SAÚDE</h1>
+        <p>
+          Liberte sua energia, supere desafios diários e conquiste uma rotina mais forte, saudável e confiante.
+          Matricule-se agora e veja como pequenas mudanças podem transformar sua vida!
+        </p>
+        <button class="btn">Comece Agora</button>
+      </div>
+      <div class="header__video">
+        <video src="assets/headervideo.mp4" autoplay loop muted></video>
+      </div>
+    </header>
+    
+    <!-- QUEM SOMOS -->
+    <section class="section__container quemsomos__container" id="quemsomos">
+      <div class="quemsomos__content">
+        <div class="quemsomos__image">
+          <img src="../Imagens/quemSomos.jpg" alt="Imagem Principal" class="main-image" />
+        </div>
+        <div class="quemsomos__text">
+          <h2 class="section__header">QUEM SOMOS</h2>
+          <p>
+            Na Desenvolve Saúde, não somos apenas uma academia, mas uma comunidade focada no bem-estar e na transformação de vidas. Com estrutura moderna, profissionais experientes e um ambiente acolhedor, nosso propósito é auxiliar você a atingir seus melhores resultados, priorizando saúde, qualidade de vida e motivação.
+          </p>
+          <p>
+          Explore o universo da musculação, dança e aulas coletivas energizantes!
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ESTRUTURA  -->
+    <section class="section__container estrutura__container" id="estrutura">
+      <div class="estrutura_header">
+        <h2 class="section__header">
+          ESTRUTURA DA <span class="estrutura__highlight">DESENVOLVE SAÚDE</span>
+        </h2>
+      </div>
+      <ul class="estrutura__list">
+        <li class="estrutura__item">
+          <figure class="estrutura__figure">
+            <img src="../Imagens/Equipamentos.png" alt="Imagem de Equipamentos de alto padrão" loading="lazy">
+            <figcaption>Equipamentos de alto padrão</figcaption>
+          </figure>
+        </li>
+        <li class="estrutura__item">
+          <figure class="estrutura__figure">
+            <img src="../Imagens/salasExclusivas.png" alt="Imagem de Salas exclusivas de aulas coletivas" loading="lazy">
+            <figcaption>Salas de aula exclusivas</figcaption>
+          </figure>
+        </li>
+        <li class="estrutura__item">
+          <figure class="estrutura__figure">
+            <img src="../Imagens/areas.png" alt="Imagem de Áreas de musculação e cárdio" loading="lazy">
+            <figcaption>Áreas de musculação e cárdio</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+    
+    <!-- MODALIDADES -->
+    <section class="section__container modalidades__container" id="modalidades">
+      <div class="container modalidades-box" data-aos="fade-up">
+        <header class="">
+          <h2 class="section__header">MODALIDADES</h2> 
+          <p class="section__subheader"> 
+            Explore as diversas modalidades que oferecemos.
+          </p>
+        </header>
+        <article class="modalidades-content">
+          <!-- Musculação -->
+          <div class="class-card">
+            <img class="class-card__img" src="../Imagens/musculacao1.png" alt="Musculação" width="550" height="550" />
+            <div class="class-card__overlay">
+              <div class="text">
+                <p>
+                  Aprimore sua força e resistência com treinos personalizados de musculação.
+                </p>
+              </div>
+            </div>
+            <div class="class-card__title">
+              <h3 class="class-modalidade-title">MUSCULAÇÃO</h3> 
+            </div>
+          </div>
+          <!-- Lutas -->
+          <div class="class-card">
+            <img class="class-card__img" src="../Imagens/lutas1.png" alt="Lutas (Boxe e Muay Thai)" width="550" height="550" />
+            <div class="class-card__overlay">
+              <div class="text">
+                <p>
+                  Desenvolva disciplina, força e agilidade com aulas de Boxe, Muay Thai e outros...
+                </p>
+              </div>
+            </div>
+            <div class="class-card__title">
+              <h3 class="class-modalidade-title">COMBATE</h3> 
+            </div>
+          </div>
+          <!-- Spinning -->
+          <div class="class-card">
+            <img class="class-card__img" src="../Imagens/corrida1.png" alt="Spinning" width="550" height="550" />
+            <div class="class-card__overlay">
+              <div class="text">
+                <p>
+                  Sinta a energia em treinos dinâmicos e intensos de Spinning.
+                </p>
+              </div>
+            </div>
+            <div class="class-card__title">
+              <h3 class="class-modalidade-title">CORRIDA</h3> 
+            </div>
+          </div>
+          <!-- Funcional -->
+          <div class="class-card">
+            <img class="class-card__img" src="../Imagens/funcional1.png" alt="Funcional" width="550" height="550" />
+            <div class="class-card__overlay">
+              <div class="text">
+                <p>
+                  Melhore seu condicionamento físico com treinos dinâmicos e desafiadores de funcional.
+                </p>
+              </div>
+            </div>
+            <div class="class-card__title">
+              <h3 class="class-modalidade-title">Funcional</h3> 
+            </div>
+          </div>
+          <!-- Pilates -->
+          <div class="class-card">
+            <img class="class-card__img" src="../Imagens/movimento1.png" alt="Pilates" width="550" height="550" />
+            <div class="class-card__overlay">
+              <div class="text">
+                <p>
+                  Fortaleça seu core e melhore sua postura com aulas de Pilates, HATHA YOGA e outros...
+                </p>
+              </div>
+            </div>
+            <div class="class-card__title">
+              <h3 class="class-modalidade-title">MOVIMENTO</h3> 
+            </div>
+          </div>
+          <!-- Danças -->
+          <div class="class-card">
+            <img class="class-card__img" src="../Imagens/dance1.png" alt="Danças" width="550" height="550" />
+            <div class="class-card__overlay">
+              <div class="text">
+                <p>
+                  Divirta-se e queime calorias com aulas de dança que combinam ritmo e energia.
+                </p>
+              </div>
+            </div>
+            <div class="class-card__title">
+              <h3 class="class-modalidade-title">DANÇAS</h3> 
+            </div>
+          </div>
+        </article>
+        <div class="modalidades-button-container">
+          <a href="modalidades.html" class="btn">Veja todas as modalidades &rarr;</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- NOSSA EQUIPE -->
+    <section class="section__container join__container" id="equipe">
+      <h2 class="section__header">NOSSA EQUIPE</h2>
+      <p class="section__subheader">
+        Na Desenvolve Saúde, nossa equipe é formada por profissionais altamente 
+        qualificados, comprometidos em oferecer o melhor acompanhamento para seu bem-estar.
+      </p>
+      <div class="join__image">
+        <img src="../Imagens/equipe.png" alt="Join" />
+        <div class="join__grid">
+          <div class="join__card">
+            <span><i class="fas fa-dumbbell"></i></span>
+            <div class="join__card__content">
+              <h4>Personal Trainer</h4>
+              <p>Atendimento Dedicado.</p>
+            </div>
+          </div>
+          <div class="join__card">
+            <span><i class="fas fa-graduation-cap"></i></span>
+            <div class="join__card__content">
+              <h4>Professores</h4>
+              <p>Formados e com CREF.</p>
+            </div>
+          </div>
+          <div class="join__card">
+            <span><i class="fas fa-clipboard-list"></i></span>
+            <div class="join__card__content">
+              <h4>Especialistas</h4>
+              <p>Que oferecem orientação, suporte e motivação.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANOS -->
+    <section class="section__container price__container" id="planos">
+      <h2 class="section__header">PLANOS</h2>
+      <p class="section__subheader">
+        Escolha o plano que melhor se adapta às suas necessidades e ao seu
+        orçamento, com opções que garantem qualidade e flexibilidade
+      </p>
+      <div class="price__grid">
+        <div class="price__card">
+          <div class="price__card__content">
+            <h4>PLANO BRONZE</h4>
+            <h3>R$105,00</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Aulas coletivas limitadas.
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Acesso a equipamentos básicos.
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Personal 1x por Semana.
+            </p>
+          </div>
+          <button class="btn price__btn">Assinar</button>
+        </div>
+        <div class="price__card">
+          <div class="price__card__content">
+            <h4>PLANO PRATA</h4>
+            <h3>R$150,00</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Aulas coletivas ilimitadas.
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Acesso completo a equipamentos.
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Personal 3x por Semana.
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Programa de nutrição.
+            </p>
+          </div>
+          <button class="btn price__btn">Assinar</button>
+        </div>
+        <div class="price__card">
+          <div class="price__card__content">
+            <h4>PLANO OURO</h4>
+            <h3>R$215,00</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Aulas coletivas ilimitadas.
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Acesso completo a equipamentos.
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Personal 5x por Semana.
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Programa de nutrição.
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Consulta com fisioterapeuta.
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Descontos em parcerias.
+            </p>
+          </div>
+          <button class="btn price__btn">Assinar</button>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- APLICATIVO -->
+    <section class="app">
+      <div class="section__container app__container" id="app">
+        <div class="app__content">
+          <h4>DESENVOLVE SAÚDE APP</h4>
+          <p>
+            Com o APP, você tem acesso a diversas funcionalidades que vão transformar seus treinos. Confira tudo o que ele pode oferecer:
+          </p>
+          <ul>
+            <li><strong>Treino Personalizado Completo</strong></li>
+            <li><strong>Progresso Semanal</strong></li>
+            <li><strong>Dicas de Saúde</strong></li>
+          </ul>
+          <!-- Botão de Acesso ao APP no FlutterFlow -->
+          <div class="app__button-container">
+            <a href="https://app.flutterflow.io/share/desenvolve-saude-m3epm8" target="_blank" class="btn">
+              Acessar o App
+            </a>
+          </div>
+        </div>
+        <div class="app__image">
+          <img src="../Imagens/app.png" alt="Celular com o App" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="section__container footer__container">
+      <span class="bg__blur"></span>
+      <span class="bg__blur footer__blur"></span>
+      <div class="footer__content">
+        <!-- Coluna esquerda -->
+        <div class="footer__col footer__col-left">
+          <h4>Funcionamento</h4>
+          <p>
+            Seg-Sex: 05h às 0h<br>
+            Sáb: 10h às 16h<br>
+            Dom e Feriados: 08h às 13h
+          </p>
+        </div>
+        <!-- Coluna direita -->
+        <div class="footer__col footer__col-right">
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="#">Fale Conosco</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos e Condições</a></li>
+            <li><a href="#">Produtos</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Logo no meio -->
+      <div class="footer__logo-center">
+        <div class="footer__logo">
+          <img src="../Imagens/logo.png" alt="logo" />
+        </div>
+      </div>
+      <!-- Seta para rolar para o topo -->
+      <div class="back-to-top">
+        <a href="#top">
+          <i class="ri-arrow-up-line"></i> 
+        </a>
+      </div>
+    </footer>
+    <div class="footer__bar">
+      Copyright © 2025 Projeto Desenvolve. Todos os direitos reservados.
+    </div>
+  
+  </body>
+
+</html>
